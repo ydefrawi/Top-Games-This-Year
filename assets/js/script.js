@@ -6,8 +6,22 @@ var platformCode={
 	Switch:"7",
 	Nintendo3ds:"8",
 	PC:"4",
-}
+};
 console.log(platformCode);
+var genreSelection={
+	1:"action",
+	2:"puzzle",
+	3:"rpg",
+	4:"indie",
+	5:"vr",
+	6:"shooter",
+	7:"fps",
+	8:"sports",
+	9:"survival",
+	10:"horrer",
+
+}
+console.log(genreSelection);
 
 const settings = {
 	// Platform for PC code is 4, ps4 is 18, xbox one 1, ps3 is 16, 360 is 14, switch is 7, 3ds is 8
