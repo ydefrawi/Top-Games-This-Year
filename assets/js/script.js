@@ -41,6 +41,8 @@ console.log("Genre Object:")
 console.log(genreSelections);
 
 
+//${platform} below will need to be swapped out with a variable containing the actual platform code (84 or  whatever).
+//before it was concatenating in the entire object. 
 
 const settings = {
 	"async": true,
