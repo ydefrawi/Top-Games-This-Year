@@ -25,10 +25,11 @@ var genreSelection={
 }
 console.log(genreSelection);
 
+// takes in selections from user and searches the api
 const settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${pastYear},${year}&genres=${genreSelection}&platforms=${platformCode}&ordering=metacritic&page_size=20`,
+	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${pastYear},${year}&genres=${genreSelection}&platforms=${platformCode}&ordering=metacritic&page_size=10`,
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "71e3147708msh713981020d02028p1c2586jsn77d951e6a61b",
