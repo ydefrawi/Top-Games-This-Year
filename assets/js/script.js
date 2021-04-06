@@ -1,3 +1,6 @@
+var year=moment().format("YYYY");
+var futureMonth = moment().subtract(1, 'Y').format('YYYY-MM-DD');
+console.log(year);
 var platformCode={
 	Playstation4:"18",
 	Playstation3:"16",
