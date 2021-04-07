@@ -18,8 +18,8 @@ console.log("The code for PS4: " +platform)
 //The same will apply to genreSelection object
 
 //We might need a function converting whatever the user selects in the drop down
-//to the correct key before we pass it into the API url. Might be simpler for Genre(?)
-//Since they keys are sequential starting from one there's probably a an easier way.  
+//to the correct 'value' before we pass it into the API url. Might be simpler for Genre(?)
+//Since they keys are sequential starting from 1 there could be an easy solution.   
 
 console.log("Platform Codes Object:")
 console.log(platformCodes);
@@ -44,6 +44,7 @@ console.log(genreSelections);
 //${platform} below will need to be swapped out with a variable containing the actual platform code (84 or  whatever).
 //before it was concatenating in the entire object. 
 
+// takes in selections from user and searches the api
 const settings = {
 	"async": true,
 	"crossDomain": true,
