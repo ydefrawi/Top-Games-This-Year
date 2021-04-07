@@ -47,10 +47,12 @@ var genreSelections={
 // console.log(genreSelections);
 
 
-//${platform} below will need to be swapped out with a variable containing the actual platform code (84 or  whatever).
+//${platform} below will need to be swapped out with a variable containing the actual platform code (84 or whatever).
 //before it was concatenating in the entire object. 
 
 // takes in selections from user and searches the api
+
+//I guess this section has to global?? 
 const settings = {
 	"async": true,
 	"crossDomain": true,
@@ -63,7 +65,10 @@ const settings = {
 		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
 	}
 };
+//Global----------------------
 
+
+var getRAWGData=function(){
 $.ajax(settings).done(function (response) {
 
 	console.log(response.results);
@@ -71,6 +76,7 @@ $.ajax(settings).done(function (response) {
 	
 
 });
+}
 
 var renderGameData = function(response, genre, platform){
 
@@ -78,6 +84,7 @@ var renderGameData = function(response, genre, platform){
 	{
 		
 		//creates div for a 'section' for each game 
+		
 		var gameSection = document.createElement('div')
 		gameSection.textContent = "Game Name"
 		gameNameEl.appendChild(gameSection)
@@ -95,7 +102,7 @@ var renderGameData = function(response, genre, platform){
 	
 }
 
-
+getRAWGData();
 
 
 
