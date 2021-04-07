@@ -64,3 +64,18 @@ $.ajax(settings).done(function (response) {
 
 
 });
+
+// when a game is selected it passes the game name into the search query for youtube
+function gameVideo(gameName) {
+    fetch(`https://www.googleapis.com/youtube/v3/search?list=${gameName}&key=AIzaSyAeKSxi1SCBtErDfdLze16qiqmLbnGTMxI`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+        // catches any fetch errors
+        .catch(function (err) {
+            console.log(err);
+        });
+	};
