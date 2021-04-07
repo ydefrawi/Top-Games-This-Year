@@ -1,3 +1,7 @@
+var gameNameEl = document.querySelector('body')
+
+
+
 var year=moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
 var platformCodes={
@@ -12,8 +16,10 @@ var platformCodes={
 
 //To find the VALUE of an item in an object, use [objectname].[key]    
 //The line below returns "18" (PS4's code)
+
 platform = platformCodes.PS4;
-console.log("The code for PS4: " +platform)
+// console.log("The code for PS4: " +platform)
+
 //-----------------------
 //The same will apply to genreSelection object
 
@@ -21,8 +27,8 @@ console.log("The code for PS4: " +platform)
 //to the correct 'value' before we pass it into the API url. Might be simpler for Genre(?)
 //Since they keys are sequential starting from 1 there could be an easy solution.   
 
-console.log("Platform Codes Object:")
-console.log(platformCodes);
+// console.log("Platform Codes Object:")
+// console.log(platformCodes);
 
 var genreSelections={
 	1:"action",
@@ -37,8 +43,8 @@ var genreSelections={
 	10:"horror",
 }
 
-console.log("Genre Object:")
-console.log(genreSelections);
+// console.log("Genre Object:")
+// console.log(genreSelections);
 
 
 //${platform} below will need to be swapped out with a variable containing the actual platform code (84 or  whatever).
@@ -61,9 +67,44 @@ const settings = {
 $.ajax(settings).done(function (response) {
 
 	console.log(response.results);
-
+	renderGameData(response)
+	
 
 });
+
+var renderGameData = function(response, genre, platform){
+
+	for (i=0; i<20; i++)
+	{
+		
+		//creates div for a 'section' for each game 
+		var gameSection = document.createElement('div')
+		gameSection.textContent = "Game Name"
+		gameNameEl.appendChild(gameSection)
+
+
+		gameAPI = response.results[i].name
+		console.log(gameAPI)
+		var gameName = document.createElement('h4');
+		gameName.textContent = gameAPI
+		gameSection.appendChild(gameName);
+	
+	}
+
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
 
 // when a game is selected it passes the game name into the search query for youtube
 function gameVideo(gameName) {
