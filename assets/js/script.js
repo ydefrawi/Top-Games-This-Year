@@ -1,7 +1,6 @@
+//SELECTORS------------------------ 
+
 var gameNameEl = document.querySelector('body')
-
-
-
 var year=moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
 var platformCodes={
@@ -50,7 +49,6 @@ var genreSelections={
 //${platform} below will need to be swapped out with a variable containing the actual platform code (84 or whatever).
 //before it was concatenating in the entire object. 
 
-// takes in selections from user and searches the api
 
 //I guess this section has to global?? 
 const settings = {
@@ -65,9 +63,12 @@ const settings = {
 		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
 	}
 };
-//Global----------------------
 
 
+//FUNCTIONS--------------------------------
+
+
+//Accepts selections from user to retrieve response. Calls the rendering function(s)
 var getRAWGData=function(){
 $.ajax(settings).done(function (response) {
 
@@ -78,6 +79,7 @@ $.ajax(settings).done(function (response) {
 });
 }
 
+// Renders game data to the page
 var renderGameData = function(response, genre, platform){
 
 	for (i=0; i<20; i++)
@@ -103,8 +105,6 @@ var renderGameData = function(response, genre, platform){
 }
 
 
-// this will later get called by an eventListener 
-getRAWGData();
 
 
 
@@ -129,3 +129,10 @@ function gameVideo(gameName) {
             console.log(err);
         });
 	};
+
+
+
+//EVENT LISTENERS----------------------------------------
+
+// this will later be called by an eventListener
+getRAWGData();
