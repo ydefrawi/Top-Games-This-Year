@@ -102,6 +102,8 @@ var renderGameData = function(response, genre, platform){
 	
 }
 
+
+// this will later get called by an eventListener 
 getRAWGData();
 
 
