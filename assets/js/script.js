@@ -1,7 +1,6 @@
+//SELECTORS------------------------ 
+
 var gameNameEl = document.querySelector('body')
-
-
-
 var year=moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
 var platformCodes={
@@ -47,10 +46,11 @@ var genreSelections={
 // console.log(genreSelections);
 
 
-//${platform} below will need to be swapped out with a variable containing the actual platform code (84 or  whatever).
+//${platform} below will need to be swapped out with a variable containing the actual platform code (84 or whatever).
 //before it was concatenating in the entire object. 
 
-// takes in selections from user and searches the api
+
+//I guess this section has to global?? 
 const settings = {
 	"async": true,
 	"crossDomain": true,
@@ -64,6 +64,12 @@ const settings = {
 	}
 };
 
+
+//FUNCTIONS--------------------------------
+
+
+//Accepts selections from user to retrieve response. Calls the rendering function(s)
+var getRAWGData=function(){
 $.ajax(settings).done(function (response) {
 
 	console.log(response.results);
@@ -71,13 +77,16 @@ $.ajax(settings).done(function (response) {
 	
 
 });
+}
 
+// Renders game data to the page
 var renderGameData = function(response, genre, platform){
 
 	for (i=0; i<20; i++)
 	{
 		
 		//creates div for a 'section' for each game 
+		
 		var gameSection = document.createElement('div')
 		gameSection.textContent = "Game Name"
 		gameNameEl.appendChild(gameSection)
@@ -120,3 +129,10 @@ function gameVideo(gameName) {
             console.log(err);
         });
 	};
+
+
+
+//EVENT LISTENERS----------------------------------------
+
+// this will later be called by an eventListener
+getRAWGData();
