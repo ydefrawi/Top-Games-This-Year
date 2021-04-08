@@ -51,7 +51,7 @@ const settings = {
 	"async": true,
 	"crossDomain": true,
 
-	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=2010&genres=action&platforms=${platform}&page_size=20`,
+	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=2010&genres=action&platforms=${platform}&page_size=10`,
 
 	"method": "GET",
 	"headers": {
@@ -65,7 +65,7 @@ const settings = {
 
 
 //Accepts selections from user to retrieve response. Calls the rendering function(s)
-var getRAWGData=function(){
+var getRAWGData=function(genre, platform){
 $.ajax(settings).done(function (response) {
 
 	console.log(response.results);
@@ -128,7 +128,7 @@ var renderGameData = function(response, genre, platform){
 
 
 
-
+gameName="Tom Clancys Breakpoint"
 // when a game is selected it passes the game name into the search query for youtube
 function gameVideo(gameName) {
     fetch(`https://www.googleapis.com/youtube/v3/search?list=${gameName}&key=AIzaSyAeKSxi1SCBtErDfdLze16qiqmLbnGTMxI`)
@@ -150,6 +150,10 @@ function gameVideo(gameName) {
 
 // this will later be called by an eventListener. Will have 2 arguments, genre and platform
 getRAWGData();
+gameVideo();
+
+
+
 $('.dropdown-trigger').dropdown();
 
 // document.addEventListener('DOMContentLoaded', function() {
