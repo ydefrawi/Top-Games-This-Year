@@ -1,0 +1,91 @@
+.splash1{
+    background-image: url('../images/desktopsetup.jfif');
+    background-position: right 50% bottom 80%;
+    min-height: 340px ;
+}
+
+#header {
+    margin-left: 5%;
+}
+#subheader{
+    font-weight: bolder;
+    color:white;
+    background-color:transparent;
+    /* float:inline-end; */
+    padding:0;
+    width:300px;
+    margin-right: 10%;
+    margin-top:40px;
+}
+
+.left {
+    float:none
+}
+
+h1{
+    margin:0;
+}
+
+h5{
+    /* justify-content: center; */
+    margin-block-start:unset; 
+    margin-block-end:unset;
+    border-radius: 20px;
+    text-align: center;
+    color:white;
+    max-width: 300px;
+    padding:10px;
+    display: inline;
+
+}
+
+#game-card{
+    padding-top: 5%;
+}
+
+.card{
+    border-radius: 20px;
+    min-height: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#card-container {
+    min-width: 90%;
+}
+
+#input-left{
+    min-height: 300px;
+    min-width:fit-content;
+    background-image: url('https://images.unsplash.com/photo-1601407061881-ca9fca12ff51?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size:cover;
+    background-position: center;
+    margin:0;
+}
+#input-right{
+    min-height: 300px;
+    min-width:fit-content;
+    background-image: url('https://images.unsplash.com/photo-1593108408993-58ee9c7825c2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size:cover;
+    background-position: center;
+    margin:0;
+}
+
+#game-blurb{
+    padding:0px;
+    margin-left: 33px;
+    min-width: 200px;
+}
+
+#review-blurb{
+    color:white;
+    min-width: 240px;
+}
+
+#copyright{
+    text-align:center;
+}
+
+.card-columns {
+    min-width: 200px;
+}
