@@ -51,7 +51,7 @@ const settings = {
 	"async": true,
 	"crossDomain": true,
 
-	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=2010&genres=action&platforms=${platform}&ordering=metacritic&page_size=20`,
+	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=2010&genres=action&platforms=${platform}&page_size=20`,
 
 	"method": "GET",
 	"headers": {
@@ -82,7 +82,6 @@ var renderGameData = function(response, genre, platform){
 	{
 		
 		//creates div for a 'section' for each game 
-	
 		var gameSection = document.createElement('div')
 		gameSection.textContent = "Game Name"
 		gameNameEl.appendChild(gameSection)
@@ -93,7 +92,29 @@ var renderGameData = function(response, genre, platform){
 		var gameName = document.createElement('h4');
 		gameName.textContent = gameAPI
 		gameSection.appendChild(gameName);
+
+		releasedAPI = response.results[i].released;
+		var released=document.createElement('h4');
+		released.textContent=releasedAPI; 
+		gameSection.appendChild(released);
+
+		MCscore = response.results[i].metacritic; 
+		var metaRating = document.createElement('h4')
+		metaRating.textContent=MCscore;
+		gameSection.appendChild(metaRating)
+
+		// for(i=0; i<response.results[i].short_screenshots.length; i++){
+
+		// }
 	
+		// screenshotsArr = response.results[i].metacritic; 
+		// var metaRating = document.createElement('h4')
+		// metaRating.textContent=MCscore;
+		// gameSection.appendChild(metaRating)
+		
+		//  =
+
+		
 	}
 }
 
