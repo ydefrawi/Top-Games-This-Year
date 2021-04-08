@@ -1,10 +1,10 @@
 //SELECTORS------------------------ 
-
 var gameNameEl = document.querySelector('body')
+var copyrightEl = document.querySelector('#copyright')
+
+
 var year=moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
-
-
 var platformCodes={
 	PS4:"18",
 	PS3:"16",
@@ -130,3 +130,13 @@ function gameVideo(gameName) {
 // this will later be called by an eventListener. Will have 2 arguments, genre and platform
 getRAWGData();
 $('.dropdown-trigger').dropdown();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, options);
+  });
