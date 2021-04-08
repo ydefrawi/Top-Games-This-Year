@@ -5,13 +5,7 @@ var copyrightEl = document.querySelector('#copyright')
 
 var year = moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
-var platformCodes = {
-	PS4: "18",
-	PS5: "187",
-	XB1: "1",
-	SWITCH: "7",
-	PC: "4",
-};
+
 
 //To find the VALUE of an item in an object, use [objectname].[key]    
 //The line below returns "18" (PS4's code)
@@ -23,18 +17,8 @@ platform = platformCodes.PS4;
 //to the correct 'value' before we pass it into the API url. Might be simpler for Genre(?)
 //Since they keys are sequential starting from 1 there could be an easy solution.   
 
-var genreSelections = {
-	1: "action",
-	2: "puzzle",
-	3: "rpg",
-	4: "indie",
-	5: "vr",
-	6: "shooter",
-	7: "fps",
-	8: "sports",
-	9: "survival",
-	10: "horror",
-}
+var genreSelection=
+var platformSelection=
 
 // console.log("Genre Object:")
 // console.log(genreSelections);
@@ -49,7 +33,7 @@ const settings = {
 	"async": true,
 	"crossDomain": true,
 
-	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year},${pastYear}&genres=action&platforms=${platform}&page_size=10`,
+	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year},${pastYear}&genres=${genreSelection}&platforms=${platformSelection}&page_size=10`,
 
 	"method": "GET",
 	"headers": {
