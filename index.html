@@ -16,107 +16,110 @@
 
 <body>
 
-   
-  
-     
-        <div class="slider" style="height: 440px;">
-          <ul class="slides" style="height: 400px;">
-            <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
-              <div class="material-placeholder"><img class="materialboxed" width="650" src="./assets/images/ps4controller.jpg"></div>
-              <div class="caption center-align" style="opacity: 0; transform: translateY(-100px);">
-                <h3>This is our big Tagline!</h3>
-              </div>
-            </li>
-            <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
-              <div class="material-placeholder" ><img class="materialboxed slider-image2" src="./assets/images/keyboard.jpg"  width="650"></div>
-              <div class="caption left-align" style="opacity: 0; transform: translateX(-100px);">
-                <h3>Left Aligned Caption</h3>
-              </div>
-            </li>
-          
+  <div class="slider" style="height: 440px;">
+    <ul class="slides" style="height: 400px;">
+      <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
+        <div class="material-placeholder"><img class="materialboxed" width="650"
+            src="./assets/images/ps4controller.jpg"></div>
+        <div class="caption center-align" style="opacity: 0; transform: translateY(-100px);">
+          <h3>This is our big Tagline!</h3>
+        </div>
+      </li>
+      <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
+        <div class="material-placeholder"><img class="materialboxed slider-image2" src="./assets/images/keyboard.jpg"
+            width="650"></div>
+        <div class="caption left-align" style="opacity: 0; transform: translateX(-100px);">
+          <h3>Left Aligned Caption</h3>
+        </div>
+      </li>
 
 
-            <li style="opacity: 1; transform: translateX(0px) translateY(0px);" class="active">
-              <div class="material-placeholder"><img class="materialboxed slider-image4" width="650" src='./assets/images/Xbox-controller.jpg'></div>
-              <div class="caption right-align" style="opacity: 1; transform: translateX(0px) translateY(0px);">
-                <h3>Right Aligned Caption</h3>
-              </div>
-            </li>
-          </ul>
-        <!-- <ul class="indicators"><li class="indicator-item"></li><li class="indicator-item"></li><li class="indicator-item active"></li></ul></div> -->
 
-  <div class="section no-pad-bot darken-5 splash1" id="index-banner">
-    <br><br>
-    <h1 id="header" class="left white-text text-darken-3">Top Videogames of 2021</h1>
-    <div class="row center">
-      <br><br></br><br><br><br><br>
-      <h5>Check out what great titles you may have missed out on this year!</h5>
+      <li style="opacity: 1; transform: translateX(0px) translateY(0px);" class="active">
+        <div class="material-placeholder"><img class="materialboxed slider-image4" width="650"
+            src='./assets/images/Xbox-controller.jpg'></div>
+        <div class="caption right-align" style="opacity: 1; transform: translateX(0px) translateY(0px);">
+          <h3>Right Aligned Caption</h3>
+        </div>
+      </li>
+    </ul>
+    <!-- <ul class="indicators"><li class="indicator-item"></li><li class="indicator-item"></li><li class="indicator-item active"></li></ul></div> -->
+
+    <div class="section no-pad-bot darken-5 splash1" id="index-banner">
+      <br><br>
+      <h1 id="header" class="left white-text text-darken-3">Top Videogames of 2021</h1>
+      <div class="row center">
+        <br><br></br><br><br><br><br>
+        <h5>Check out what great titles you may have missed out on this year!</h5>
+      </div>
+
+      <br><br>
     </div>
+    <!-- Row containing the two drop down buttons. It's split into two columns with IDs input-left and input-right -->
+    <div class="row">
+      <div id="input-left" class="col s12 m6 button-area">
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select Genre</a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!">First Person Shooter</a></li>
+          <li><a href="#!">Role Playing</a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a href="#!">Strategy</a></li>
+          <li><a href="#!">MMORPG</a></li>
+          <li><a href="#!">Adventure</a></li>
+        </ul>
 
-    <br><br>
-  </div>
-  <!-- Row containing the two drop down buttons. It's split into two columns with IDs input-left and input-right -->
-  <div class="row">
-    <div id="input-left" class="col s6 m6 button-area">
-      <!-- Dropdown Trigger -->
-      <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select Genre</a>
-      <!-- Dropdown Structure -->
-      <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">First Person Shooter</a></li>
-        <li><a href="#!">Role Playing</a></li>
-        <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">Strategy</a></li>
-        <li><a href="#!">MMORPG</a></li>
-        <li><a href="#!">Adventure</a></li>
-      </ul>
+      </div>
+      <div id="input-right" class="col s12 m6 button-area">
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Select Platform</a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown2' class='dropdown-content'>
+          <li><a href="#!">PS4 </a></li>
+          <li><a href="#!">XBOX ONE</a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a href="#!">PS5</a></li>
+          <li><a href="#!"><i class="material-icons">view_module</i>PC</a></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>Nintendo Switch</a></li>
+        </ul>
 
+      </div>
     </div>
-    <div id="input-right" class="col s6 m6 button-area">
-      <!-- Dropdown Trigger -->
-      <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Select Platform</a>
-      <!-- Dropdown Structure -->
-      <ul id='dropdown2' class='dropdown-content'>
-        <li><a href="#!">PS4 </a></li>
-        <li><a href="#!">XBOX ONE</a></li>
-        <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">PS5</a></li>
-        <li><a href="#!"><i class="material-icons">view_module</i>PC</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>Nintendo Switch</a></li>
-      </ul>
-
-    </div>
-  </div>
   </div>
   <div id=card-container class="container">
     <section>
       <div class="row">
-<!---- parent element (column) that will hold all game cards -->
-        <div class="col s12 m3">
-<!-- Game Card Starts Below -->
-          <div id = "game-card" class="card blue-grey darken-1"> 
-            <div class = "row">
+        <!---- parent element (column) that will hold all game cards -->
+        <div class="col s12">
+          <!-- Game Card Starts Below -->
+          <div id="game-card" class="card blue-grey darken-1">
+            <div class="row">
               <div class="col s12 m3">
                 <div id="game-blurb" class="card-content white-text">
-                  <span  class="card-title game-card-title card-columns">Game Title</span>
-                  <p>I am a very simple card. I am good at containing small bits of information.
+                  <span class="card-title game-card-title card-columns">Game Title</span>
+                  <p id="left-blurb">I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
                 </div>
               </div>
               <div class="col s12 m3 card-columns">
-                <img class="materialboxed" width="100%"
+                <img class="materialboxed card-pics" width="100%"
                   src='https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1952&q=80'>
               </div>
               <div class="col s12 m3 card-columns">
-                <img class="materialboxed" width="100%"
+                <img class="materialboxed card-pics" width="100%"
                   src='https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1952&q=80'>
               </div>
-              <div id = 'review-blurb' class="col s12 m3 card-columns">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                </div>
+              <div id='right-box' class="col s12 m2 card-columns">
+                <p id="right-blurb">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip.</p>
+              </div>
             </div>
-            </div>
+          </div>
 
-<!-- Game Card Ends Just Above -->
+          <!-- Game Card Ends Just Above -->
         </div>
       </div>
     </section>
