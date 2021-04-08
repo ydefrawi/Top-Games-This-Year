@@ -20,11 +20,12 @@
     <h1 id="header" class="left white-text text-darken-3">Top Videogames of 2021</h1>
     <div class="row center">
       <br><br></br><br><br><br><br>
-      <h5>Check out what great titles you may have missed!</h5>
+      <h5>Check out what great titles you may have missed out on this year!</h5>
     </div>
 
     <br><br>
   </div>
+  <!-- Row containing the two drop down buttons. It's split into two columns with IDs input-left and input-right -->
   <div class="row">
     <div id="input-left" class="col s6 m6 button-area">
       <!-- Dropdown Trigger -->
@@ -59,33 +60,37 @@
   <div id=card-container class="container">
     <section>
       <div class="row">
+<!---- parent element (column) that will hold all game cards -->
         <div class="col s12 m12">
-          <div class="card blue-grey darken-1">
-            <div class="col s4">
-              <div class="card-content white-text">
-                <span class="card-title game-card-title">Game Title</span>
+<!-- Game Card Starts Below -->
+          <div id = "game-card" class="card blue-grey darken-1"> 
+            <div class="col s3">
+              <div id="game-blurb" class="card-content white-text">
+                <span  class="card-title game-card-title card-columns">Game Title</span>
                 <p>I am a very simple card. I am good at containing small bits of information.
                   I am convenient because I require little markup to use effectively.</p>
               </div>
             </div>
-            <div class="col s4">
+            <div class="col s3 card-columns">
               <img class="materialboxed" width="230"
                 src='https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1952&q=80'>
             </div>
-            <div class="col s4">
+            <div class="col s3 card-columns">
               <img class="materialboxed" width="230"
                 src='https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1952&q=80'>
             </div>
-            <div class="col s4">4TH COLUMN</div>
-
+            <div id = 'review-blurb' class="col s3 card-columns">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+               et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+              </div>
           </div>
+<!-- Game Card Ends Just Above -->
         </div>
       </div>
     </section>
 
   </div>
 
-  <footer class="page-footer orange darken-3">
+  <footer class="page-footer black darken-3">
     <div id=copyright class="container">
       © Copyright Text
     </div>
