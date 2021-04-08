@@ -3,6 +3,8 @@
 var gameNameEl = document.querySelector('body')
 var year=moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
+
+
 var platformCodes={
 	PS4:"18",
 	PS3:"16",
@@ -15,19 +17,13 @@ var platformCodes={
 
 //To find the VALUE of an item in an object, use [objectname].[key]    
 //The line below returns "18" (PS4's code)
-
 platform = platformCodes.PS4;
-// console.log("The code for PS4: " +platform)
-
-//-----------------------
 //The same will apply to genreSelection object
+
 
 //We might need a function converting whatever the user selects in the drop down
 //to the correct 'value' before we pass it into the API url. Might be simpler for Genre(?)
 //Since they keys are sequential starting from 1 there could be an easy solution.   
-
-// console.log("Platform Codes Object:")
-// console.log(platformCodes);
 
 var genreSelections={
 	1:"action",
@@ -86,7 +82,7 @@ var renderGameData = function(response, genre, platform){
 	{
 		
 		//creates div for a 'section' for each game 
-		
+	
 		var gameSection = document.createElement('div')
 		gameSection.textContent = "Game Name"
 		gameNameEl.appendChild(gameSection)
@@ -99,9 +95,6 @@ var renderGameData = function(response, genre, platform){
 		gameSection.appendChild(gameName);
 	
 	}
-
-
-	
 }
 
 
@@ -134,5 +127,6 @@ function gameVideo(gameName) {
 
 //EVENT LISTENERS----------------------------------------
 
-// this will later be called by an eventListener
+// this will later be called by an eventListener. Will have 2 arguments, genre and platform
 getRAWGData();
+$('.dropdown-trigger').dropdown();
