@@ -7,11 +7,9 @@ var year=moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
 var platformCodes={
 	PS4:"18",
-	PS3:"16",
+	PS5:"187",
 	XB1:"1",
-	XB360:"14",
 	SWITCH:"7",
-	N3DS:"8",
 	PC:"4",
 };
 
@@ -51,7 +49,7 @@ const settings = {
 	"async": true,
 	"crossDomain": true,
 
-	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=2010&genres=action&platforms=${platform}&page_size=20`,
+	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=2021&genres=action&platforms=${platform}&page_size=20`,
 
 	"method": "GET",
 	"headers": {
