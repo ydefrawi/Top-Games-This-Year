@@ -1,31 +1,33 @@
 var gameNameEl = document.querySelector('body')
 var copyrightEl = document.querySelector('#copyright')
-var genreSelection="";
-var platformSelection="";
+var genreSelection = "";
+var platformSelection = "";
 var year = moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
-var gamesList="";
+var gamesList = "";
 
 
 
 
 
 
-
-function selectGenre(){
-	genreSelection=$(this).data('genre');
+// on click event pulls data for selected element and strigifys it to work with api call
+function selectGenre() {
+	genreSelection = $(this).data('genre');
+	platformSelection = JSON.stringify(genreSelection);
 	return genreSelection;
 };
 
-function selectPlatform(){
-	platformSelection=$(this).data('console')
-	platformSelection=JSON.stringify(platformSelection);
+// on click event pulls data for selected element and strigifys it to work with api call
+function selectPlatform() {
+	platformSelection = $(this).data('console')
+	platformSelection = JSON.stringify(platformSelection);
 	return platformSelection;
 };
 
-
-function apicall(){
-const settings = {
+// on click event runs an api call taking in the current year, one year ago today, genre selection, and platformselection
+function apicall() {
+	const settings = {
 		"async": true,
 		"crossDomain": true,
 		"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year}${pastYear}&genres=${genreSelection}&platforms=${platformSelection}&page_size=10`,
@@ -36,27 +38,26 @@ const settings = {
 		}
 	};
 	$.ajax(settings).done(function (response) {
-		gamesList=response.results;
-;		renderGamesData(gamesList);
+		gamesList = response.results;
+		; renderGamesData(gamesList);
 	});
-	};
+};
 
 // Renders game data to the page
-function renderGamesData(gamesList){
+function renderGamesData(gamesList) {
 	$(".gameCards").empty();
 	console.log(gamesList);
 
+	// creates game cards for the length of games recieved using variables pulled from information of game card
 	for (i = 0; i < gamesList.length; i++) {
-		var gameName=gamesList[i]['name'];
-		var metacritic=gamesList[i]['metacritic'];
-		var screenshot=gamesList[i]['short_screenshots'][0]['image'];
-		var clip=gamesList[i]['clip']['clips'][320];
-		var genreList0=gamesList[i]['genres'][0]['name'];
-		var genreList1=gamesList[i]['genres'][1]['name'];
-		var genreList2=gamesList[i]['genres'][2]['name'];
-		var store0=gamesList[i]['stores'][0]['store']['name'];
-		var store1=gamesList[i]['stores'][1]['store']['name'];
-		var store2=gamesList[i]['stores'][2]['store']['name'];
+		var gameName = gamesList[i]['name'];
+		var metacritic = gamesList[i]['metacritic'];
+		var screenshot = gamesList[i]['short_screenshots'][0]['image'];
+		var clip = gamesList[i]['clip']['clips'][320];
+		var genreList0 = gamesList[i]['genres'][0]['name'];
+		var genreList1 = gamesList[i]['genres'][1]['name'];
+		var store0 = gamesList[i]['stores'][0]['store']['name'];
+		var store1 = gamesList[i]['stores'][1]['store']['name'];
 		$(".gameCards").append(`
 		<div id="game-card" class="card blue-grey darken-1">
 		<div class="row">
@@ -69,7 +70,7 @@ function renderGamesData(gamesList){
 			  <br>
 			  <p id="left-blurb">${genreList1}</p>
 			  <br>
-			  <p id="left-blurb">${genreList2}</p>
+			 
 			</div>
 		  </div>
 		  <div class="col s12 m3 card-columns">
@@ -84,47 +85,11 @@ function renderGamesData(gamesList){
 			<br>
 			<p id='right-text'>${store1}</p>
 			<br>
-			<p id='right-text'>${store2}</p>
+		
 		  </div>
 		</div>
 	  </div>
 		`)
-
-		
-
-// 		//creates div for a 'section' for each game 
-// 		var gameSection = document.createElement('div')
-// 		gameSection.textContent = "Game Name"
-// 		gameNameEl.appendChild(gameSection)
-
-
-// 		gameAPI = response.results[i].name
-// 		console.log(gameAPI)
-// 		var gameName = document.createElement('h4');
-// 		gameName.textContent = gameAPI
-// 		gameSection.appendChild(gameName);
-
-// 		releasedAPI = response.results[i].released;
-// 		var released = document.createElement('h4');
-// 		released.textContent = releasedAPI;
-// 		gameSection.appendChild(released);
-
-// 		MCscore = response.results[i].metacritic;
-// 		var metaRating = document.createElement('h4')
-// 		metaRating.textContent = MCscore;
-// 		gameSection.appendChild(metaRating)
-
-		// for(i=0; i<response.results[i].short_screenshots.length; i++){
-
-		// }
-
-		// screenshotsArr = response.results[i].metacritic; 
-		// var metaRating = document.createElement('h4')
-		// metaRating.textContent=MCscore;
-		// gameSection.appendChild(metaRating)
-
-		//  =
-
 
 	}
 };
@@ -175,6 +140,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 $('.slider').slider({ width: 1000, });
 
-$(".genreSelection").on("click",selectGenre);
-$(".platformSelection").on("click",selectPlatform);
-$("#submitButton").on("click",apicall);
+$(".genreSelection").on("click", selectGenre);
+$(".platformSelection").on("click", selectPlatform);
+$("#submitButton").on("click", apicall);
