@@ -64,11 +64,11 @@ function renderGamesData(gamesList) {
 		  <div class="col s12 m3">
 			<div id="game-blurb" class="card-content white-text">
 			  <span class="card-title game-card-title card-columns">${gameName}</span>
-			  <p id="left-blurb">Metacritic Score: ${metacritic}</p>
+			  <p class="left-blurb glassScore">Metacritic Score: ${metacritic}</p>
 			  <br>
-			  <p id="left-blurb">${genreList0}</p>
+			  <p class="left-blurb">${genreList0}</p>
 			  <br>
-			  <p id="left-blurb">${genreList1}</p>
+			  <p class="left-blurb">${genreList1}</p>
 			  <br>
 			 
 			</div>
