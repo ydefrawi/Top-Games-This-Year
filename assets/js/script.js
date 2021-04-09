@@ -1,26 +1,31 @@
-//SELECTORS------------------------ 
 var gameNameEl = document.querySelector('body')
 var copyrightEl = document.querySelector('#copyright')
-
-
+var genreSelection="";
+var platformSelection="";
 var year = moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
 
 
+
+
+
+
+
 function selectGenre(){
-	var genreSelection=$(this).data('genre');
-	console.log(genreSelection);
+	genreSelection=$(this).data('genre');
+	return genreSelection;
 };
 
 function selectPlatform(){
-	var platformSelection=$(this).data('console')
-	var platformSelection=JSON.stringify(platformSelection);
-	console.log(platformSelection);
+	platformSelection=$(this).data('console')
+	platformSelection=JSON.stringify(platformSelection);
+	return platformSelection;
 };
 
 
-//I guess this section has to global?? 
-// const settings = {
+// //I guess this section has to global?? 
+// function apicall(){
+// var settings = {
 // 	"async": true,
 // 	"crossDomain": true,
 
@@ -32,14 +37,14 @@ function selectPlatform(){
 // 		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
 // 	}
 // };
+// };
 
 
-//FUNCTIONS--------------------------------
 
 
-//Accepts selections from user to retrieve response. Calls the rendering function(s)
+// //Accepts selections from user to retrieve response. Calls the rendering function(s)
 // var getRAWGData = function () {
-// 	$.ajax(settings).done(function (response) {
+// 	$.ajax(settings).then(function (response) {
 
 // 		console.log(response.results);
 // 		renderGameData(response)
