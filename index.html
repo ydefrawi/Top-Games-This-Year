@@ -14,7 +14,7 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-          <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -22,26 +22,25 @@
   <div class="slider" style="height: 440px;">
     <ul class="slides" style="height: 400px;">
       <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
-        <div class="material-placeholder"><img class="materialboxed" width="650" src="./assets/images/controller.jpg">
+        <div class="material-placeholder"><img class="materialboxed" width="650" src="./assets/images/controller.jpg"
+            style="bottom: 300;position: fixed;">
         </div>
-        <div class="caption center-align" style="opacity: 0; transform: translateY(-100px);">
-          <h3>This is our big Tagline!</h3>
+        <div class="caption center-align" style="opacity: 1; transform: translateY(-400px);">
+          <h3>We've got you covered!</h3>
         </div>
       </li>
       <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
-        <div class="material-placeholder" style=""><img class="materialboxed"
-            src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="650"
-            style="background-image: url(&quot;./images/nottalkinghead.JPG&quot;);"></div>
+        <div class="material-placeholder" style=""><img class="materialboxed" src="./assets/images/PC-player.jpg"
+            width="650" style="bottom: 0px; position: fixed;"></div>
         <div class="caption left-align" style="opacity: 0; transform: translateX(-100px);">
-          <h3>Left Aligned Caption</h3>
+          <h3>Metacritic scores, screenshots, clips and retailers listed!</h3>
         </div>
       </li>
       <li style="opacity: 1; transform: translateX(0px) translateY(0px);" class="active">
         <div class="material-placeholder"><img class="materialboxed" width="650"
-            src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            style="background-image: url(&quot;./images/whtsindabx.JPG&quot;);"></div>
+            src="./assets/images/Xbox-controller.jpg" style="bottom: 300px;"></div>
         <div class="caption right-align" style="opacity: 1; transform: translateX(0px) translateY(0px);">
-          <h3>Right Aligned Caption</h3>
+          <h3>Miss any must-play games that came out this year?</h3>
         </div>
       </li>
     </ul>
@@ -52,14 +51,14 @@
       <h1 id="header" class="left white-text text-darken-3">Top Videogames of 2021</h1>
       <div class="row center">
         <br><br></br><br><br><br><br>
-        <h5>Check out what great titles you may have missed out on this year!</h5>
+        <h5>Select a genre and the platform of your choice below!</h5>
       </div>
 
       <br><br>
     </div>
     <!-- Row containing the two drop down buttons. It's split into two columns with IDs input-left and input-right -->
     <div class="row">
-      <div id="input-left" class="col s6 m6 button-area">
+      <div id="input-left" class="col s12 m6 button-area">
         <!-- Dropdown Trigger -->
         <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select Genre</a>
         <!-- Dropdown Structure -->
@@ -77,7 +76,7 @@
         </ul>
 
       </div>
-      <div id="input-right" class="col s6 m6 button-area">
+      <div id="input-right" class="col s12 m6 button-area">
         <!-- Dropdown Trigger -->
         <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Select Platform</a>
         <!-- Dropdown Structure -->
@@ -103,22 +102,24 @@
               <div class="col s12 m3">
                 <div id="game-blurb" class="card-content white-text">
                   <span class="card-title game-card-title card-columns">Game Title</span>
-                  <p>I am a very simple card. I am good at containing small bits of information.
+                  <p id="left-blurb">I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
                 </div>
               </div>
               <div class="col s12 m3 card-columns">
-                <img class="materialboxed" width="100%"
+                <img class="materialboxed card-pics" width="100%"
                   src='https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1952&q=80'>
               </div>
               <div class="col s12 m3 card-columns">
-                <img class="materialboxed" width="100%"
+                <img class="materialboxed card-pics" width="100%"
                   src='https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1952&q=80'>
               </div>
-              <div id='review-blurb' class="col s3 card-columns">"Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip.
+              <div id='review-blurb' class="col s3 card-columns">
+                <p id='right-text'>"Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip.
+                </p>
               </div>
             </div>
           </div>
@@ -148,4 +149,3 @@
 </body>
 
 </html>
-
