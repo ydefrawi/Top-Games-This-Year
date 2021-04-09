@@ -43,6 +43,7 @@ const settings = {
 
 // Renders game data to the page
 function renderGamesData(gamesList){
+	$(".gameCards").empty();
 	console.log(gamesList);
 
 	for (i = 0; i < gamesList.length; i++) {
