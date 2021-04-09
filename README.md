@@ -52,6 +52,7 @@
 <ul>
 <li>linking to stores where can be purchased</li>
 <li>More information displayed with correcting if() functions for api call data processing</li>
+<li>Drop down bar displayed selection retention</li>
 </ul>
 
 <hr>
