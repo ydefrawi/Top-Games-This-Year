@@ -51,8 +51,7 @@
 <h1>Future Features<h1>
 <ul>
 <li>linking to stores where can be purchased</li>
-<li>More information displayed with correcting if()![Capture](https://user-images.githubusercontent.com/69323366/114215236-fa2f1d80-992a-11eb-9f14-8fa553dcfa52.JPG)
- functions for api call data processing</li>
+<li>More information displayed with correcting if() functions for api call data processing</li>
 </ul>
 
 <hr>
