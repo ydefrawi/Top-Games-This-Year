@@ -7,10 +7,6 @@
 <hr>
 
 
-
-
-<hr>
-
 <h1>Features</h>
 <ul>
 <li>Takes in a users choice of platform and game genre</li>
@@ -55,7 +51,8 @@
 <h1>Future Features<h1>
 <ul>
 <li>linking to stores where can be purchased</li>
-<li>More information displayed with correcting if functions for api call data processing</li>
+<li>More information displayed with correcting if()![Capture](https://user-images.githubusercontent.com/69323366/114215236-fa2f1d80-992a-11eb-9f14-8fa553dcfa52.JPG)
+ functions for api call data processing</li>
 </ul>
 
 <hr>
@@ -70,6 +67,15 @@
 <hr>
 
 
+![Capture](https://user-images.githubusercontent.com/69323366/114215255-01eec200-992b-11eb-82b1-ff1f96a4f2e6.JPG)
+
+
+![Capture1](https://user-images.githubusercontent.com/69323366/114215358-221e8100-992b-11eb-9693-1700ce69d59f.JPG)
+
+
+
+
+![Capture3](https://user-images.githubusercontent.com/69323366/114215339-1c28a000-992b-11eb-82ce-a1746474e0db.JPG)
 
 
 
