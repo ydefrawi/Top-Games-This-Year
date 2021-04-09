@@ -23,19 +23,11 @@ function selectPlatform(){
 };
 
 
-function getapi(){
-apicall(year,pastYear,genreSelection,platformSelection);
-};
-
-function apicall(year,pastYear,genreSelection,platformSelection){
-	console.log(genreSelection);
-	console.log(year);
-	console.log(pastYear);
-	console.log(platformSelection);
-	const settings = {
+function apicall(){
+const settings = {
 		"async": true,
 		"crossDomain": true,
-		"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year},${pastYear}&genres=${genreSelection}&platforms=${platformSelection}&page_size=10`,
+		"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year}${pastYear}&genres=${genreSelection}&platforms=${platformSelection}&page_size=10`,
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-key": "71e3147708msh713981020d02028p1c2586jsn77d951e6a61b",
@@ -137,4 +129,4 @@ $('.slider').slider({ width: 1000, });
 
 $(".genreSelection").on("click",selectGenre);
 $(".platformSelection").on("click",selectPlatform);
-$("#submitButton").on("click",getapi);
+$("#submitButton").on("click",apicall);
