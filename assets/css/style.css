@@ -40,7 +40,8 @@ h5{
 }
 
 #game-card{
-    padding-top: 5%;
+    padding-top: 2%;
+    min-width: 350px;
 }
 
 .card{
@@ -73,19 +74,46 @@ h5{
 
 #game-blurb{
     padding:0px;
-    margin-left: 33px;
-    min-width: 200px;
+    margin-left: 20px;
+    min-width: 150px;
 }
 
 #review-blurb{
     color:white;
-    min-width: 240px;
+    min-width: 150px;
+    margin-left: 10px;
+    width: 250px;
+    position: relative;
+}
+
+
+#right-text{
+    max-width: fit-content; 
+    margin-left: 20px;
+
+}
+
+#left-blurb{
+    text-align: left;
+    width: 240px;
 }
 
 #copyright{
     text-align:center;
+    width: 100%;
 }
 
 .card-columns {
-    min-width: 200px;
+    min-width: 280px;
+    max-width: 350px;
+    position: relative;
+
+}
+
+.card-pics {
+    min-width: 280px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
 }
