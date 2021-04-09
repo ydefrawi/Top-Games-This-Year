@@ -24,7 +24,7 @@ function selectPlatform(){
 
 
 // //I guess this section has to global?? 
-function apicall(genreSelection,platformSelection){
+function apicall(year,pastYear,genreSelection,platformSelection){
 var settings = {
 	"async": true,
 	"crossDomain": true,
@@ -36,6 +36,7 @@ var settings = {
 		"x-rapidapi-key": "71e3147708msh713981020d02028p1c2586jsn77d951e6a61b",
 		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
 	}
+
 };
 };
 
@@ -143,4 +144,4 @@ $('.slider').slider({ width: 1000, });
 
 $(".genreSelection").on("click",selectGenre);
 $(".platformSelection").on("click",selectPlatform);
-$(".submitButton").on("clcik",apicall);
+$("#submitButton").on("click",apicall);
