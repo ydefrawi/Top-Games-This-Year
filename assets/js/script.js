@@ -1,45 +1,51 @@
-//SELECTORS------------------------ 
 var gameNameEl = document.querySelector('body')
 var copyrightEl = document.querySelector('#copyright')
-
-
+var genreSelection="";
+var platformSelection="";
 var year = moment().format("YYYY");
 var pastYear = moment().subtract(1, 'Y').format('YYYY');
 
 
+
+
+
+
+
 function selectGenre(){
-	var genreSelection=$(this).data('genre');
-	console.log(genreSelection);
+	genreSelection=$(this).data('genre');
+	return genreSelection;
 };
 
 function selectPlatform(){
-	var platformSelection=$(this).data('console')
-	var platformSelection=JSON.stringify(platformSelection);
-	console.log(platformSelection);
+	platformSelection=$(this).data('console')
+	platformSelection=JSON.stringify(platformSelection);
+	return platformSelection;
 };
 
 
-//I guess this section has to global?? 
-// const settings = {
-// 	"async": true,
-// 	"crossDomain": true,
+// //I guess this section has to global?? 
+function apicall(year,pastYear,genreSelection,platformSelection){
+var settings = {
+	"async": true,
+	"crossDomain": true,
 
-// 	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year},${pastYear}&genres=${genreSelection}&platforms=${platformSelection}&page_size=10`,
+	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year},${pastYear}&genres=${genreSelection}&platforms=${platformSelection}&page_size=10`,
 
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-key": "71e3147708msh713981020d02028p1c2586jsn77d951e6a61b",
-// 		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
-// 	}
-// };
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "71e3147708msh713981020d02028p1c2586jsn77d951e6a61b",
+		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
+	}
+
+};
+};
 
 
-//FUNCTIONS--------------------------------
 
 
-//Accepts selections from user to retrieve response. Calls the rendering function(s)
+// //Accepts selections from user to retrieve response. Calls the rendering function(s)
 // var getRAWGData = function () {
-// 	$.ajax(settings).done(function (response) {
+// 	$.ajax(settings).then(function (response) {
 
 // 		console.log(response.results);
 // 		renderGameData(response)
@@ -138,3 +144,4 @@ $('.slider').slider({ width: 1000, });
 
 $(".genreSelection").on("click",selectGenre);
 $(".platformSelection").on("click",selectPlatform);
+$("#submitButton").on("click",apicall);
