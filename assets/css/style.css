@@ -117,3 +117,27 @@ h5{
     margin-right: 10px;
     overflow: hidden;
 }
+
+#input-right{
+    display: flex;
+    flex-flow:column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 0px;
+}
+#input-left{
+
+    padding-right: 0px;
+}
+
+#submitButton{
+    width:220px;
+    align-self: flex-start;
+    padding-right: 10px;
+    position:static;
+    background-color:rgb(91, 82, 223) ;
+}
+
+.dropdown-trigger{
+    width:230px;
+}
