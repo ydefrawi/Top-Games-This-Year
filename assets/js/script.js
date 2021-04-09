@@ -59,7 +59,7 @@ function renderGamesData(gamesList) {
 		var store0 = gamesList[i]['stores'][0]['store']['name'];
 		var store1 = gamesList[i]['stores'][1]['store']['name'];
 		$(".gameCards").append(`
-		<div id="game-card" class="card blue-grey darken-1">
+		<div id="game-card" class="card darken-1 glass">
 		<div class="row">
 		  <div class="col s12 m3">
 			<div id="game-blurb" class="card-content white-text">
