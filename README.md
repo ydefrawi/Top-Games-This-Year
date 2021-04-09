@@ -44,7 +44,7 @@
 <hr>
 
 <h1>Demo</h1>
-<p href="https://ydefrawi.github.io/Top-Games-This-Year/">Clcik here for Demo!</p>
+<p>https://ydefrawi.github.io/Top-Games-This-Year/</p>
 
 <hr>
 
