@@ -23,36 +23,29 @@ function selectPlatform(){
 };
 
 
-// //I guess this section has to global?? 
+function getapi(){
+apicall(year,pastYear,genreSelection,platformSelection);
+};
+
 function apicall(year,pastYear,genreSelection,platformSelection){
-var settings = {
-	"async": true,
-	"crossDomain": true,
-
-	"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year},${pastYear}&genres=${genreSelection}&platforms=${platformSelection}&page_size=10`,
-
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "71e3147708msh713981020d02028p1c2586jsn77d951e6a61b",
-		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
-	}
-
-};
-};
-
-
-
-
-// //Accepts selections from user to retrieve response. Calls the rendering function(s)
-// var getRAWGData = function () {
-// 	$.ajax(settings).then(function (response) {
-
-// 		console.log(response.results);
-// 		renderGameData(response)
-
-
-// 	});
-// }
+	console.log(genreSelection);
+	console.log(year);
+	console.log(pastYear);
+	console.log(platformSelection);
+	const settings = {
+		"async": true,
+		"crossDomain": true,
+		"url": `https://rawg-video-games-database.p.rapidapi.com/games?dates=${year},${pastYear}&genres=${genreSelection}&platforms=${platformSelection}&page_size=10`,
+		"method": "GET",
+		"headers": {
+			"x-rapidapi-key": "71e3147708msh713981020d02028p1c2586jsn77d951e6a61b",
+			"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
+		}
+	};
+	$.ajax(settings).done(function (response) {
+		console.log(response.results);
+	});
+	};
 
 // Renders game data to the page
 // var renderGameData = function (response, genre, platform) {
@@ -144,4 +137,4 @@ $('.slider').slider({ width: 1000, });
 
 $(".genreSelection").on("click",selectGenre);
 $(".platformSelection").on("click",selectPlatform);
-$("#submitButton").on("click",apicall);
+$("#submitButton").on("click",getapi);
